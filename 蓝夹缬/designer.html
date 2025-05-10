@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设计师 - 温州蓝夹缬</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .chat-container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .chat-header {
+            background: #1a5276;
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .chat-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        
+        .chat-header h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        
+        .chat-header p {
+            margin: 0;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        .chat-messages {
+            padding: 20px;
+            height: 400px;
+            overflow-y: auto;
+        }
+        
+        .message {
+            margin-bottom: 20px;
+            display: flex;
+        }
+        
+        .message.ai {
+            flex-direction: row;
+        }
+        
+        .message.user {
+            flex-direction: row-reverse;
+        }
+        
+        .message-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 10px;
+        }
+        
+        .message-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .message-content {
+            max-width: 70%;
+            padding: 12px 15px;
+            border-radius: 18px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        
+        .ai .message-content {
+            background: #f1f1f1;
+            color: #333;
+            border-bottom-left-radius: 5px;
+        }
+        
+        .user .message-content {
+            background: #1a5276;
+            color: #fff;
+            border-bottom-right-radius: 5px;
+        }
+        
+        .message-time {
+            font-size: 12px;
+            color: #999;
+            margin-top: 5px;
+            text-align: right;
+        }
+        
+        .chat-input {
+            display: flex;
+            padding: 15px;
+            background: #f9f9f9;
+            border-top: 1px solid #eee;
+        }
+        
+        .chat-input input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 15px;
+            outline: none;
+        }
+        
+        .chat-input button {
+            background: #1a5276;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            padding: 0 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .chat-input button:hover {
+            background: #154360;
+        }
+        
+        .intro-section {
+            margin-bottom: 30px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .feature-card {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            cursor: pointer;  /* 添加手型光标 */
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            color: #1a5276;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .feature-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>文化创新知识服务系统</h1>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">首页</a></li>
+                <li class="dropdown">
+                    <a href="#">知识服务系统</a>
+                    <div class="dropdown-content">
+                        <a href="art.html">艺术构成库</a>
+                        <a href="craft.html">工艺构成库</a>
+                        <a href="commercial.html">商业构成库</a>
+                        <a href="gene.html">基因图谱</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">创新设计系统</a>
+                    <div class="dropdown-content">
+                        <a href="inheritor.html">非遗传承人</a>
+                        <a href="designer.html">设计师</a>
+                    </div>
+                </li>
+                <li><a href="search.html"><i class="fas fa-search"></i> 知识检索</a></li>
+                <li class="dropdown">
+                    <a href="#"><i class="fas fa-user"></i> 用户</a>
+                    <div class="dropdown-content">
+                        <a href="login.html">登录</a>
+                        <a href="register.html">注册</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content-section">
+        <h2>蓝夹缬AI设计师</h2>
+        
+        <div class="intro-section">
+            <p>欢迎使用蓝夹缬AI设计师！这是一个基于人工智能的交互系统，专门为蓝夹缬艺术设计提供创意支持。无论您是专业设计师还是蓝夹缬爱好者，都可以通过与AI对话，获取关于蓝夹缬的专业知识、设计灵感和创新思路。</p>
+            
+            <div class="features">
+                <div class="feature-card" onclick="window.location.href='inheritor-chat.html'">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>非遗传承人大师助手</h3>
+                    <p>提供蓝夹缬设计灵感和创意思路，帮助您突破设计瓶颈。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>专业知识</h3>
+                    <p>提供关于蓝夹缬历史、工艺和纹样特点的专业知识。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>设计建议</h3>
+                    <p>针对您的设计需求，提供专业的色彩搭配和纹样应用建议。</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-container">
+            <div class="chat-header">
+                <img src="images/ai.png" alt="AI设计师">
+                <div>
+                    <h3>蓝夹缬AI设计师</h3>
+                    <p>在线 · 随时为您提供帮助</p>
+                </div>
+            </div>
+            
+            <div class="chat-messages" id="chat-messages">
+                <div class="message ai">
+                    <div class="message-avatar">
+                        <img src="images/ai.png" alt="AI设计师">
+                    </div>
+                    <div class="message-bubble">
+                        <div class="message-content">
+                            您好！我是蓝夹缬AI设计师，很高兴为您提供关于蓝夹缬艺术的专业建议和创意灵感。您可以向我咨询关于蓝夹缬的历史、工艺、纹样特点，或者寻求设计灵感和创新思路。请问有什么可以帮助您的吗？
+                        </div>
+                        <div class="message-time">今天 10:00</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="输入您的问题或设计需求...">
+                <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </section>
+    <!-- <div class="chat-container">
+        <p>P=A+B+C+D</p>
+    </div> -->
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>关于我们</h3>
+                <p>温州蓝夹缬文化传承与创新中心致力于非物质文化遗产的保护与发展。</p>
+            </div>
+            <div class="footer-section">
+                <h3>联系方式</h3>
+                <p>地址：浙江省温州市温州理工学院<br>滨海校区：温州龙湾经济技术开发区金海三道337号<br>茶山校区：温州茶山高教园区景观大道1号</p>
+                <p>电话：0577-86680517</p>
+                <p>传真：0577-86680517</p>
+            </div>
+            <div class="footer-section">
+                <h3>关注我们</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-weixin"></i></a>
+                    <a href="#"><i class="fab fa-weibo"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 温州理工学院 版权所有</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatMessages = document.getElementById('chat-messages');
+            const userInput = document.getElementById('user-input');
+            const sendBtn = document.getElementById('send-btn');
+            
+            // 预设的回答
+            const aiResponses = {
+                "你好": "您好！很高兴为您提供关于蓝夹缬的设计咨询。请问有什么可以帮助您的吗？",
+                "蓝夹缬是什么": "蓝夹缬是中国传统的印染工艺，起源于唐代，主要流行于浙江温州地区。它采用雕版夹印和靛蓝染色相结合的技术，在白色布料上印染出蓝白相间的图案。作为国家级非物质文化遗产，蓝夹缬以其独特的美学价值和深厚的文化内涵而闻名。",
+                "蓝夹缬的特点": "蓝夹缬的主要特点包括：1. 使用天然靛蓝染料；2. 采用雕版夹印技术；3. 图案多为蓝白相间；4. 纹样丰富，包括花鸟、人物、几何图案等；5. 具有浓郁的民间艺术特色和东方美学韵味。",
+                "如何设计蓝夹缬": "设计蓝夹缬可以遵循以下步骤：1. 了解传统蓝夹缬的纹样特点和美学原则；2. 确定设计主题和风格；3. 绘制初步草图；4. 考虑图案的对称性和重复性；5. 细化设计细节；6. 考虑实际制作工艺的可行性。您可以在传统元素的基础上进行创新，融入现代设计理念。",
+                "蓝夹缬的应用": "蓝夹缬可以应用于多个领域：1. 服装设计：将蓝夹缬图案应用于时装、配饰等；2. 家居装饰：用于窗帘、桌布、抱枕等；3. 文创产品：开发笔记本、手机壳等文创商品；4. 艺术装置：创作具有当代艺术特色的蓝夹缬装置艺术。",
+                "蓝夹缬的色彩": "传统蓝夹缬主要使用靛蓝染料，呈现出深浅不一的蓝色调。在现代设计中，您可以尝试在保留蓝白基调的同时，适当融入其他颜色作为点缀，如浅紫色、淡绿色等，但要注意保持整体色调的和谐统一。",
+                "蓝夹缬的纹样": "传统蓝夹缬的纹样主要包括：1. 花鸟鱼虫：牡丹、莲花、凤凰等；2. 人物故事：戏曲场景、民间传说等；3. 吉祥图案：如意、福寿等；4. 几何纹样：回纹、云纹等。您可以从这些传统元素中汲取灵感，进行现代化的重新诠释。"
+            };
+            
+            // 默认回复
+            const defaultResponse = "感谢您的提问。关于这个问题，我建议您可以从以下几个方面考虑：1. 研究传统蓝夹缬的纹样特点和美学原则；2. 考虑如何将传统元素与现代设计理念相结合；3. 尝试不同的应用场景，如服装、家居或文创产品。您还有其他关于蓝夹缬的问题吗？";
+            
+            // 发送消息函数
+            function sendMessage() {
+                const message = userInput.value.trim();
+                if (message === '') return;
+                
+                // 添加用户消息
+                addMessage(message, 'user');
+                userInput.value = '';
+                
+                // 模拟AI思考
+                setTimeout(() => {
+                    // 查找预设回答或使用默认回答
+                    let response = '';
+                    for (const key in aiResponses) {
+                        if (message.includes(key)) {
+                            response = aiResponses[key];
+                            break;
+                        }
+                    }
+                    
+                    if (response === '') {
+                        response = defaultResponse;
+                    }
+                    
+                    // 添加AI回复
+                    addMessage(response, 'ai');
+                    
+                    // 滚动到底部
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 1000);
+            }
+            
+            // 添加消息到聊天界面
+            function addMessage(text, sender) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${sender}`;
+                
+                const avatar = document.createElement('div');
+                avatar.className = 'message-avatar';
+                
+                const img = document.createElement('img');
+                img.src = sender === 'ai' ? 'images/ai-avatar.jpg' : 'images/user-avatar.jpg';
+                img.alt = sender === 'ai' ? 'AI设计师' : '用户';
+                
+                avatar.appendChild(img);
+                
+                const bubble = document.createElement('div');
+                bubble.className = 'message-bubble';
+                
+                const content = document.createElement('div');
+                content.className = 'message-content';
+                content.textContent = text;
+                
+                const time = document.createElement('div');
+                time.className = 'message-time';
+                
+                // 获取当前时间
+                const now = new Date();
+                const hours = now.getHours().toString().padStart(2, '0');
+                const minutes = now.getMinutes().toString().padStart(2, '0');
+                time.textContent = `今天 ${hours}:${minutes}`;
+                
+                bubble.appendChild(content);
+                bubble.appendChild(time);
+                
+                messageDiv.appendChild(avatar);
+                messageDiv.appendChild(bubble);
+                
+                chatMessages.appendChild(messageDiv);
+                
+                // 滚动到底部
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+            
+            // 点击发送按钮
+            sendBtn.addEventListener('click', sendMessage);
+            
+            // 按Enter键发送
+            userInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

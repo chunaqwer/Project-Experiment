@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基因图谱 - 文化创新知识服务系统</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .knowledge-map {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .map-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+
+        .map-section {
+            margin-bottom: 40px;
+        }
+
+        .map-title {
+            color: #1a5276;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .map-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #1a5276;
+        }
+
+        .feature-card h3 {
+            color: #1a5276;
+            margin-bottom: 15px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .feature-list li:before {
+            content: '•';
+            color: #1a5276;
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+
+        .knowledge-image {
+            width: 100%;
+            max-width: 800px;
+            margin: 30px auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>文化创新知识服务系统</h1>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">首页</a></li>
+                <li class="dropdown">
+                    <a href="#">知识服务系统</a>
+                    <div class="dropdown-content">
+                        <a href="art.html">艺术构成库</a>
+                        <a href="craft.html">工艺构成库</a>
+                        <a href="commercial.html">商业构成库</a>
+                        <a href="gene.html">基因图谱</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">创新设计系统</a>
+                    <div class="dropdown-content">
+                        <a href="inheritor.html">非遗传承人</a>
+                        <a href="designer.html">设计师</a>
+                    </div>
+                </li>
+                <li><a href="search.html"><i class="fas fa-search"></i> 知识检索</a></li>
+                <li class="dropdown">
+                    <a href="#"><i class="fas fa-user"></i> 用户</a>
+                    <div class="dropdown-content">
+                        <a href="login.html">登录</a>
+                        <a href="register.html">注册</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="knowledge-map">
+        <h2>蓝夹缬基因图谱</h2>
+        <p>通过知识图谱的形式，展现蓝夹缬艺术的数字特征、工艺要素和文化基因，深入解析这一非物质文化遗产的独特价值。</p>
+
+        <img src="images/graph.png" alt="蓝夹缬工艺基因图谱" class="knowledge-image">
+
+
+        <div class="map-container">
+            <div class="map-section">
+                <h2 class="map-title">工艺基因特征</h2>
+                <div class="map-content">
+                    <div class="feature-card">
+                        <h3>材料特征</h3>
+                        <ul class="feature-list">
+                            <li>优质白棉布</li>
+                            <li>天然靛蓝染料</li>
+                            <li>梨木雕版</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h3>工艺流程</h3>
+                        <ul class="feature-list">
+                            <li>雕版制作</li>
+                            <li>夹印技术</li>
+                            <li>染色工艺</li>
+                            <li>后期处理</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h3>技术要点</h3>
+                        <ul class="feature-list">
+                            <li>版面精雕细琢</li>
+                            <li>夹印力度控制</li>
+                            <li>染色时间把控</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-section">
+                <h2 class="map-title">艺术基因特征</h2>
+                <div class="map-content">
+                    <div class="feature-card">
+                        <h3>图案类型</h3>
+                        <ul class="feature-list">
+                            <li>传统纹样</li>
+                            <li>戏曲人物</li>
+                            <li>花鸟虫鱼</li>
+                            <li>山水风景</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h3>色彩特征</h3>
+                        <ul class="feature-list">
+                            <li>靛青本色</li>
+                            <li>蓝白对比</li>
+                            <li>层次渐变</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h3>构图特点</h3>
+                        <ul class="feature-list">
+                            <li>对称均衡</li>
+                            <li>疏密有致</li>
+                            <li>层次分明</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="map-section">
+                <h2 class="map-title">文化基因特征</h2>
+                <div class="map-content">
+                    <div class="feature-card">
+                        <h3>文化内涵</h3>
+                        <ul class="feature-list">
+                            <li>民间信仰</li>
+                            <li>吉祥寓意</li>
+                            <li>生活美学</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h3>地域特色</h3>
+                        <ul class="feature-list">
+                            <li>温州特色</li>
+                            <li>江南韵味</li>
+                            <li>海洋文化</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h3>传承发展</h3>
+                        <ul class="feature-list">
+                            <li>技艺传承</li>
+                            <li>创新应用</li>
+                            <li>现代转化</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>关于我们</h3>
+                <p>温州蓝夹缬文化传承与创新中心致力于非物质文化遗产的保护与发展。</p>
+            </div>
+            <div class="footer-section">
+                <h3>联系方式</h3>
+                <p>地址：浙江省温州市温州理工学院<br>滨海校区：温州龙湾经济技术开发区金海三道337号<br>茶山校区：温州茶山高教园区景观大道1号</p>
+                <p>电话：0577-86680517</p>
+                <p>传真：0577-86680517</p>
+            </div>
+            <div class="footer-section">
+                <h3>关注我们</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-weixin"></i></a>
+                    <a href="#"><i class="fab fa-weibo"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 温州理工学院 版权所有</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>非遗传承人 - 温州蓝夹缬</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .inheritor-section {
+            margin-bottom: 60px;
+        }
+        
+        .inheritor-card {
+            display: flex;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        
+        .inheritor-image {
+            flex: 0 0 40%;
+            position: relative;
+        }
+        
+        .inheritor-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .inheritor-info {
+            flex: 0 0 60%;
+            padding: 30px;
+        }
+        
+        .inheritor-name {
+            font-size: 24px;
+            color: #1a5276;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .inheritor-title {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .inheritor-bio {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .inheritor-achievements {
+            margin-bottom: 20px;
+        }
+        
+        .inheritor-achievements h4 {
+            color: #1a5276;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .inheritor-achievements ul {
+            padding-left: 20px;
+        }
+        
+        .inheritor-achievements li {
+            margin-bottom: 8px;
+        }
+        
+        .inheritor-quote {
+            background: #f1f8ff;
+            padding: 10px;
+            border-left: 4px solid #1a5276;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .inheritor-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .gallery-item {
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .inheritor-card {
+                flex-direction: column;
+            }
+            
+            .inheritor-image, .inheritor-info {
+                flex: 0 0 100%;
+            }
+            
+            .inheritor-image {
+                height: 300px;
+            }
+            
+            .inheritor-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>文化创新知识服务系统</h1>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">首页</a></li>
+                <li class="dropdown">
+                    <a href="#">知识服务系统</a>
+                    <div class="dropdown-content">
+                        <a href="art.html">艺术构成库</a>
+                        <a href="craft.html">工艺构成库</a>
+                        <a href="commercial.html">商业构成库</a>
+                        <a href="gene.html">基因图谱</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">创新设计系统</a>
+                    <div class="dropdown-content">
+                        <a href="inheritor.html">非遗传承人</a>
+                        <a href="designer.html">设计师</a>
+                    </div>
+                </li>
+                <li><a href="search.html"><i class="fas fa-search"></i> 知识检索</a></li>
+                <li class="dropdown">
+                    <a href="#"><i class="fas fa-user"></i> 用户</a>
+                    <div class="dropdown-content">
+                        <a href="login.html">登录</a>
+                        <a href="register.html">注册</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="content-section">
+        <h2>蓝夹缬非遗传承人</h2>
+        <p>蓝夹缬作为国家级非物质文化遗产，其传承和发展离不开一代代匠人的坚守与创新。以下是几位杰出的蓝夹缬非遗传承人，他们用毕生精力守护着这一古老技艺的火种，并为其注入新的活力。</p>
+        
+        <div class="inheritor-section">
+            <div class="inheritor-card">
+                <div class="inheritor-image">
+                    <img src="images/inheritor/inheritor1.jpeg" alt="王河生">
+                </div>
+                <div class="inheritor-info">
+                    <h3 class="inheritor-name">王河生</h3>
+                    <p class="inheritor-title">国家级非物质文化遗产蓝夹缬代表性传承人</p>
+                    
+                    <div class="inheritor-bio">
+                        <p>王河生，1955年生于浙江苍南，出身于蓝夹缬世家，自幼跟随父亲学习蓝夹缬技艺。他精通雕版、配色、夹印等全套工艺，尤其在雕版技艺上造诣深厚，能够雕刻出极其精细的纹样。</p>
+                        <p>2008年，王河生被文化部认定为国家级非物质文化遗产蓝夹缬项目代表性传承人。多年，他致力于蓝夹缬的保护、传承与创新，培养了大批年轻传承人，并积极推动蓝夹缬走向国际舞台。</p>
+                    </div>
+                    
+                    <div class="inheritor-quote">
+                        <p>"蓝夹缬不仅是一种工艺，更是一种文化，一种精神。我们要做的，不仅是守护这门技艺，还要<br>让它在新时代焕发新的生命力。"</p>
+                    </div>
+                    
+                    <div class="inheritor-achievements">
+                        <h4>主要成就：</h4>
+                        <ul>
+                            <li>2008年被认定为国家级非物质文化遗产代表性传承人</li>
+                            <li>作品《百鸟朝凤》获中国民间工艺美术"百花奖"金奖</li>
+                            <li>主持编撰《温州蓝夹缬工艺全集》</li>
+                            <li>在巴黎、东京等地举办蓝夹缬艺术展览</li>
+                            <li>创办"河生蓝夹缬工作室"，培养传承人30named</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="inheritor-gallery">
+                        <div class="gallery-item">
+                            <img src="images/inheritor/work1-1.jpg" alt="王河生作品1">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/inheritor/work1-2.jpg" alt="王河生作品2">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/inheritor/work1-3.jpg" alt="王河生作品3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="inheritor-card">
+                <div class="inheritor-image">
+                    <img src="images/inheritor/inheritor2.jpg" alt="林巧云">
+                </div>
+                <div class="inheritor-info">
+                    <h3 class="inheritor-name">林巧云</h3>
+                    <p class="inheritor-title">浙江省级非物质文化遗产蓝夹缬传承人</p>
+                    
+                    <div class="inheritor-bio">
+                        <p>林巧云，1968年生于温州苍南，是蓝夹缬女性传承人中的杰出代表。她自20岁起跟随名师学习蓝夹缬技艺，尤其擅长靛蓝染色和创新图案设计，将传统纹样与现代审美相结合，创作出一系列具有时代特色的蓝夹缬作品。</p>
+                        <p>2012年，林巧云被认定为浙江省级非物质文化遗产蓝夹缬项目代表性传承人。她创办的"巧云蓝染坊"成为温州地区重要的蓝夹缬传习基地，吸引了众多年轻人前来学习。</p>
+                    </div>
+                    
+                    <div class="inheritor-quote">
+                        <p>"蓝夹缬的美在于它的纯粹与自然。我希望通过创新设计，让更多年轻人爱上这门古老的艺术，<br>让蓝色的记忆延续下去。"</p>
+                    </div>
+                    
+                    <div class="inheritor-achievements">
+                        <h4>主要成就：</h4>
+                        <ul>
+                            <li>2012年被认定为浙江省级非物质文化遗产代表性传承人</li>
+                            <li>作品《江南春色》获中国工艺美术"百花奖"银奖</li>
+                            <li>开发蓝夹缬文创产品系列，成功打入国内外市场</li>
+                            <li>在杭州、上海等地举办蓝夹缬艺术展览</li>
+                            <li>创办"巧云蓝染坊"，培养女性传承人20 named</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="inheritor-gallery">
+                        <div class="gallery-item">
+                            <img src="images/inheritor/work2-1.jpg" alt="林巧云作品1">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/inheritor/work2-2.jpg" alt="林巧云作品2">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/inheritor/work2-3.jpg" alt="林巧云作品3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="inheritor-card">
+                <div class="inheritor-image">
+                    <img src="images/inheritor/inheritor3.jpg" alt="张明辉">
+                </div>
+                <div class="inheritor-info">
+                    <h3 class="inheritor-name">张明辉</h3>
+                    <p class="inheritor-title">温州市级非物质文化遗产蓝夹缬传承人</p>
+                    
+                    <div class="inheritor-bio">
+                        <p>张明辉，1980年生于温州苍南，是新一代蓝夹缬传承人的代表。他毕业于中国美术学院，将专业的设计理念与传统蓝夹缬工艺相结合，在保持传统技艺的基础上进行了大胆创新。</p>
+                        <p>2015年，张明辉被认定为温州市级非物质文化遗产蓝夹缬项目代表性传承人。他创立的"蓝印记"品牌成功将蓝夹缬与现代时尚、家居设计相结合，让这一古老工艺焕发出新的生命力。</p>
+                    </div>
+                    
+                    <div class="inheritor-quote">
+                        <p>"传统不是固步自封，而是在传承中创新。我希望通过现代设计理念，让蓝夹缬这一古老工艺<br>走进现代人的生活。"</p>
+                    </div>
+                    
+                    <div class="inheritor-achievements">
+                        <h4>主要成就：</h4>
+                        <ul>
+                            <li>2015年被认定为温州市级非物质文化遗产代表性传承人</li>
+                            <li>创立"蓝印记"品牌，产品销往国内外</li>
+                            <li>与多家知名设计师品牌合作，推出蓝夹缬时装系列</li>
+                            <li>在米兰设计周展出蓝夹缬创新作品</li>
+                            <li>开设"蓝夹缬创新设计工作坊"，培养年轻设计师</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="inheritor-gallery">
+                        <div class="gallery-item">
+                            <img src="images/inheritor/work3-1.jpg" alt="张明辉作品1">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/inheritor/work3-2.jpg" alt="张明辉作品2">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/inheritor/work3-3.jpg" alt="张明辉作品3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>关于我们</h3>
+                <p>温州蓝夹缬文化传承与创新中心致力于非物质文化遗产的保护与发展。</p>
+            </div>
+            <div class="footer-section">
+                <h3>联系方式</h3>
+                <p>地址：浙江省温州市温州理工学院<br>滨海校区：温州龙湾经济技术开发区金海三道337号<br>茶山校区：温州茶山高教园区景观大道1号</p>
+                <p>电话：0577-86680517</p>
+                <p>传真：0577-86680517</p>
+            </div>
+            <div class="footer-section">
+                <h3>关注我们</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-weixin"></i></a>
+                    <a href="#"><i class="fab fa-weibo"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 温州理工学院 版权所有</p>
+        </div>
+    </footer>
+</body>
+</html>

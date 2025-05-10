@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商用 - 温州蓝夹缬</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .ai-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .ai-item {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+        
+        .ai-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .ai-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .ai-content {
+            padding: 20px;
+        }
+        
+        .ai-content h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #1a5276;
+            font-size: 18px;
+        }
+        
+        .ai-content p {
+            margin: 0 0 15px;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .ai-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .ai-tag {
+            background: #e8f4fc;
+            color: #1a5276;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .filter-container {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .filter-btn {
+            background: #f1f1f1;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: #1a5276;
+            color: #fff;
+        }
+        
+        .intro-section {
+            background: #f1f8ff;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            border-left: 4px solid #1a5276;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>文化创新知识服务系统</h1>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">首页</a></li>
+                <li class="dropdown">
+                    <a href="#">知识服务系统</a>
+                    <div class="dropdown-content">
+                        <a href="art.html">艺术构成库</a>
+                        <a href="craft.html">工艺构成库</a>
+                        <a href="commercial.html">商业构成库</a>
+                        <a href="gene.html">基因图谱</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">创新设计系统</a>
+                    <div class="dropdown-content">
+                        <a href="inheritor.html">非遗传承人</a>
+                        <a href="designer.html">设计师</a>
+                    </div>
+                </li>
+                <li><a href="search.html"><i class="fas fa-search"></i> 知识检索</a></li>
+                <li class="dropdown">
+                    <a href="#"><i class="fas fa-user"></i> 用户</a>
+                    <div class="dropdown-content">
+                        <a href="login.html">登录</a>
+                        <a href="register.html">注册</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content-section">
+        <h2>蓝夹缬</h2>
+        
+        <div class="intro-section">
+            <h3>数字赋能非遗新生</h3>
+            <p>我们以AI技术为桥梁，将蓝夹缬的千年纹样基因解码重构——智能算法深度解析传统雕版中的构图规律与符号体系，生成既延续"靛蓝留白"美学语言，又契合当代审美的创新纹样。</p>
+            <p>这些图案也包括文创案例、非遗工作坊等多个领域，为蓝夹缬的商业应用提供了更多可能性。</p>
+        </div>
+        
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <button class="filter-btn" data-filter="fashion">AI设计与文创案例</button>
+            <button class="filter-btn" data-filter="home">非遗工作坊</button>
+            <button class="filter-btn" data-filter="cultural">商业模式</button>
+        </div>
+        
+        <div class="ai-gallery">
+            <div class="ai-item" data-category="fashion">
+                <img src="images/commercial/ai3.jpeg" alt="AI生成蓝夹缬服装设计">
+                <div class="ai-content">
+                    <h3>现代服装图案</h3>
+                    <p>AI生成的蓝夹缬图案，适合应用于现代服装设计，融合传统与时尚元素。</p>
+                    <div class="ai-tags">
+                        <span class="ai-tag">服装设计</span>
+                        <span class="ai-tag">现代时尚</span>
+                        <span class="ai-tag">AI生成</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ai-item" data-category="home">
+                <img src="images/commercial/c6.jpg" alt="AI生成蓝夹缬家居装饰">
+                <div class="ai-content">
+                    <h3>家居装饰图案</h3>
+                    <p>适合用于窗帘、桌布、抱枕等家居装饰品的蓝夹缬图案，由AI根据传统纹样特点生成。</p>
+                    <div class="ai-tags">
+                        <span class="ai-tag">家居装饰</span>
+                        <span class="ai-tag">生活美学</span>
+                        <span class="ai-tag">AI生成</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ai-item" data-category="cultural">
+                <img src="images/commercial/c1.jpg" alt="AI生成蓝夹缬文创产品">
+                <div class="ai-content">
+                    <h3>蓝染笔记本</h3>
+                    <p>将传统蓝夹缬纹样与现代笔记本设计融合，每一页都透出古朴的靛蓝韵味，兼具实用性与收藏价值。</p>
+                    <div class="ai-tags">
+                        <span class="ai-tag">文房雅物</span>
+                        <span class="ai-tag">文创产品</span>
+                        <span class="ai-tag">可定制封面</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ai-item" data-category="fashion">
+                <img src="images/commercial/ai2.png" alt="AI生成蓝夹缬时装设计">
+                <div class="ai-content">
+                    <h3>高级时装图案</h3>
+                    <p>适合高级定制服装的蓝夹缬图案，AI根据时装设计需求生成的古式创新纹样。</p>
+                    <div class="ai-tags">
+                        <span class="ai-tag">高级时装</span>
+                        <span class="ai-tag">定制设计</span>
+                        <span class="ai-tag">AI生成</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ai-item" data-category="home">
+                <img src="images/commercial/c4.jpg" alt="AI生成蓝夹缬墙面装饰">
+                <div class="ai-content">
+                    <h3>墙面装饰图案</h3>
+                    <p>适合用作壁纸、壁画的蓝夹缬图案，由AI生成，为现代家居增添东方韵味。</p>
+                    <div class="ai-tags">
+                        <span class="ai-tag">墙面装饰</span>
+                        <span class="ai-tag">空间设计</span>
+                        <span class="ai-tag">AI生成</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ai-item" data-category="cultural">
+                <img src="images/commercial/c2.jpg" alt="AI生成蓝夹缬文具设计">
+                <div class="ai-content">
+                    <h3>蓝缬书签</h3>
+                    <p>将传统蓝夹缬雕版纹样浓缩于书签方寸之间，采用宣纸与靛蓝染工艺，随光线角度呈现深浅变幻的纹理。</p>
+                    <div class="ai-tags">
+                        <span class="ai-tag">文人雅物</span>
+                        <span class="ai-tag">非遗纸艺</span>
+                        <span class="ai-tag">光影效果</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ai-item" data-category="fashion">
+                <img src="images/commercial/ai4.jpeg" alt="AI生成蓝夹缬配饰设计">
+                <div class="ai-content">
+                    <h3>时尚配饰图案</h3>
+                    <p>适合丝巾、领带等配饰的蓝夹缬图案，AI根据配饰特点生成的精美纹样。</p>
+                    <div class="ai-tags">
+                        <span class="ai-tag">时尚配饰</span>
+                        <span class="ai-tag">个人装扮</span>
+                        <span class="ai-tag">AI生成</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ai-item" data-category="home">
+                <img src="images/commercial/c5.jpg" alt="AI生成蓝夹缬餐具设计">
+                <div class="ai-content">
+                    <h3>餐具设计图案</h3>
+                    <p>为餐盘、茶杯等餐具设计的蓝夹缬图案，将传统美学带入餐桌。</p>
+                    <div class="ai-tags">
+                        <span class="ai-tag">餐具设计</span>
+                        <span class="ai-tag">餐桌美学</span>
+                        <span class="ai-tag">AI生成</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ai-item" data-category="cultural">
+                <img src="images/commercial/c3.jpg" alt="AI生成蓝夹缬礼品包装">
+                <div class="ai-content">
+                    <h3>蓝缬风物明信片</h3>
+                    <p>以蓝夹缬传统纹样演绎山水花鸟主题，采用特种纸双面印刷，背面保留书写空间，让非遗技艺成为可邮寄的风景。</p>
+                    <div class="ai-tags">
+                        <span class="ai-tag">城市记忆</span>
+                        <span class="ai-tag">邮驿美学</span>
+                        <span class="ai-tag">收藏级印刷</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ai-item" data-category="cultural">
+                <img src="images/commercial/c4.jpg" alt="AI生成蓝夹缬礼品包装">
+                <div class="ai-content">
+                    <!-- 蓝染日历 -->
+                    <h3>岁时蓝历</h3>
+                    <p>将二十四节气与蓝夹缬纹样结合，每月呈现传统农事图案，日期栏采用可撕设计，撕下的日期条可作书签二次使用。</p>
+                    <div class="ai-tags">
+                        <span class="ai-tag">节气百科</span>
+                        <span class="ai-tag">再生设计</span>
+                        <span class="ai-tag">非遗日历</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ai-item" data-category="cultural">
+                <img src="images/commercial/c5.jpg" alt="AI生成蓝夹缬礼品包装">
+                <div class="ai-content">
+                    <h3>缬韵清风</h3>
+                    <p>桑蚕丝扇面手工绷制，双面呈现对称蓝夹缬纹样，竹制扇骨刻有传统回字纹，轻摇间泛起淡淡草木染香气。</p>
+                    <div class="ai-tags">
+                        <span class="ai-tag">真丝扇面</span>
+                        <span class="ai-tag">活性香氛</span>
+                        <span class="ai-tag">非遗手作</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ai-item" data-category="cultural">
+                <img src="images/commercial/c6.jpg" alt="AI生成蓝夹缬礼品包装">
+                <div class="ai-content">
+                    <h3>蓝行天下</h3>
+                    <p>10安纯棉帆布双面蓝染，包身采用现代定位印染技术还原传统雕版细节，内袋暗藏可拆卸式纹样故事卡。</p>
+                    <div class="ai-tags">
+                        <span class="ai-tag">通勤文创</span>
+                        <span class="ai-tag">耐磨工艺</span>
+                        <span class="ai-tag">文化彩蛋</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>关于我们</h3>
+                <p>温州蓝夹缬文化传承与创新中心致力于非物质文化遗产的保护与发展。</p>
+            </div>
+            <div class="footer-section">
+                <h3>联系方式</h3>
+                <p>地址：浙江省温州市温州理工学院<br>滨海校区：温州龙湾经济技术开发区金海三道337号<br>茶山校区：温州茶山高教园区景观大道1号</p>
+                <p>电话：0577-86680517</p>
+                <p>传真：0577-86680517</p>
+            </div>
+            <div class="footer-section">
+                <h3>关注我们</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-weixin"></i></a>
+                    <a href="#"><i class="fab fa-weibo"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 温州理工学院 版权所有</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 筛选功能
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const aiItems = document.querySelectorAll('.ai-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 移除所有按钮的激活状态
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // 激活当前按钮
+                    this.classList.add('active');
+                    
+                    // 获取筛选类别
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // 筛选项目
+                    aiItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
